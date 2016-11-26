@@ -1,0 +1,73 @@
+- title: Anasayfa
+  url: "/"
+  side: left
+  
+- title: "Karakterler"
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Beceri"
+    url: "/beceri/"
+  - title: "Bilim"
+    url: "/bilim/"
+  - title: "Mistik"
+    url: "/mistik/"
+  - title: "Kozmik"
+    url: "/kozmik/"
+  - title: "Teknoloji"
+    url: "/teknoloji/"
+  - title: "Mutant"
+    url: "/mutant/"
+
+- title: "Hikaye Maceraları"
+  url: "/savas/hikaye-maceralari/"
+  side: left
+  dropdown:
+  - title: "Sahne Bilgileri"
+    url: "/savas/hikaye-maceralari/sahne-bilgileri"
+  - title: "Sahne Ödülleri"
+    url: "/savas/hikaye-maceralari/sahne-odulleri"
+
+- title: "Günlük Maceralar"
+  url: "/savas/gunluk-maceralar/"
+  side: left
+  dropdown:
+  - title: "Günlük Macera Bilgileri"
+    url: "/savas/gunluk-maceralar/gunluk-macera-bilgileri"
+  - title: "Günlük Macera Ödülleri"
+    url: "/savas/hikaye-maceralari/gunluk-macera-odulleri"
+    
+- title: "Arenalar"
+  url: "/savas/arenalar/"
+  side: left
+  dropdown:
+  - title: "Arena Bilgileri"
+    url: "/savas/arenalar/arena-bilgileri"
+  - title: "Arena Ödülleri"
+    url: "/savas/arenalar/arena-odulleri"
+
+- title: "İttifak Modu"
+  url: "/savas/ittifak-modu/"
+  side: left
+  dropdown:
+  - title: "Ittifak Modu Bilgileri"
+    url: "/savas/ittifak-modu/ittifak-modu-savaslari"
+  - title: "Ittifak Modu Ödülleri"
+    url: "/savas/ittifak-modu/ittifak-modu-odulleri"
+    
+- title: "ipucu"
+  side: left
+  dropdown:
+  - title: "Arena Serileri"
+    url: "/ipucu/arena-serileri/"
+  - title: "Takım Kurma"
+    url: "/ipucu/takim-kurma/"
+        
+- title: "Yazarlar"
+  side: right
+  dropdown:
+  - title: "Ercxxx"
+    url: "/ercxxx/"
+  - title: "Turumtay"
+    url: "/turumtay/"
+    
