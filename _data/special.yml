@@ -717,27 +717,3 @@ yellow-jacket:
     s1a_name: "Biyo İğne Patlaması"
     s2a_name: "Güçlü İğne"
     s3a_name: "Biyo İğne Yaylım Ateşi"
-    
-dr-voodoo: 
-    s1a_desc: "Doktor Voodoo, hedefinin faydalı büyülerini zehirleyen Loalar'dan yardım ister."
-    s2a_desc: "Doktor Voodoo, ruhlar diyarından yardım ister. Bu isteğine yanıt veren Loalar da ona güç verir ya da düşmanının gücünü azaltır."
-    s3a_desc: "Doktor Voodoo, Papa Legba'dan yardım ister. O da Ruhlar Diyarı'na bir geçit açar."
-    s1a_name: "Ruh Venom"
-    s2a_name: "Loalar'ın Hediyesi"
-    s3a_name: "Kapıyı Aç"
-    
-hyperion: 
-    s1a_desc: "Kıyafete ekstra güç gönderen Sarı Ceket muazzam bir biyo iğne enerjisi patlaması sağlar."
-    s2a_desc: "Sarı Ceket rakibine bir dizi ağır saldırı yapar ardından da hedeflenmiş bir biyo iğne patlaması gerçekleştirir."
-    s3a_desc: "Pym Parçacıklarının desteğiyle Sarı Ceket rakibinin etrafında mikro düzeyde küçük bir boyutla uçar ve bir dizi hedeflenmiş biyo iğne saldırısı gerçekleştirir."
-    s1a_name: "Biyo İğne Patlaması"
-    s2a_name: "Güçlü İğne"
-    s3a_name: "Biyo İğne Yaylım Ateşi"
-    
-howard: 
-    s1a_desc: "Kıyafete ekstra güç gönderen Sarı Ceket muazzam bir biyo iğne enerjisi patlaması sağlar."
-    s2a_desc: "Sarı Ceket rakibine bir dizi ağır saldırı yapar ardından da hedeflenmiş bir biyo iğne patlaması gerçekleştirir."
-    s3a_desc: "Pym Parçacıklarının desteğiyle Sarı Ceket rakibinin etrafında mikro düzeyde küçük bir boyutla uçar ve bir dizi hedeflenmiş biyo iğne saldırısı gerçekleştirir."
-    s1a_name: "Biyo İğne Patlaması"
-    s2a_name: "Güçlü İğne"
-    s3a_name: "Biyo İğne Yaylım Ateşi"
