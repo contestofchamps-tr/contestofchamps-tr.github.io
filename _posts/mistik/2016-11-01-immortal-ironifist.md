@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Demir Yumruk (Beyaz)"
+title:  "Demir Yumruk (Ölümsüz)"
 subheadline: "Marvels Contest of Champions"
 teaser: ""
 categories:
