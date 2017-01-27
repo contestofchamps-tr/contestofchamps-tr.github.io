@@ -1,56 +1,19 @@
-/* Color Variables
-------------------------------------------------------------------- */
+@charset "utf-8";
+/* TOC – Color Variables
+
+- Basics
+- Corporate Identity Colorpalette
+- Foundation Color Variables
+- Grey Scale
+- Topbar-Navigation
+- Footer
+- Code
+
+*/
 
 
-// Phlow Colors
-$phlow-hell: #f5b6c9;
-$phlow-mittel: #d4007a;
-$phlow-dunkel: #900055;
 
-$phlow-haupt-hell: #fabb00;
-$phlow-haupt-mittel: #aa0132;
-$phlow-haupt-dunkel: #4b4b4d;
-
-// Phlow CI
-// Hauptfarben
-$phlow-dunkel-grau: #4b4b4d;
-$phlow-dunkel-braun: #771e1e;
-$phlow-rotbraun: #aa0132;
-$phlow-orange: #fabb00;
-
-// Netlabels
-$phlow-dunkel-gruen: #00792c;
-$phlow-mittel-gruen: #6a9519;
-$phlow-hell-gruen: #acca57;
-
-// Video
-$phlow-dunkel-rot: #e05a10;
-$phlow-mittel-orange: #f29400;
-$phlow-hell-gelb: #ffe444;
-
-// Seminare
-$phlow-dunkel-blau: #005380;
-$phlow-mittel-blau: #0085ba;
-$phlow-hell-blau: #82cbd0;
-
-// Webdesign
-$phlow-dunkel-violett: #900055;
-$phlow-mittel-mangenta: #d4007a;
-$phlow-hell-pink: #f5b6c9;
-
-// Journalismus
-$phlow-dunkel-graubraun: #6b6351;
-$phlow-mittel-graubraun: #aaa296;
-$phlow-hell-graubraun: #e1dcd7;
-
-// Grautöne
-$phlow-grau-sehr-hell: #f0f0f0;
-$phlow-grau-hell: #7e7e7e;
-$phlow-grau-mittel: #4b4b4b;
-$phlow-grau-dunkel: #323232;
-
-
-/* Color Text
+/* Basics
 ------------------------------------------------------------------- */
 
 $text-color:       	#111;
@@ -59,11 +22,12 @@ $body-bg: 			#fdfdfd;
 
 
 
-/* Corporate Identity Colorpalette/Color Scheme
+/* Corporate Identity Colorpalette
+   https://color.adobe.com/de/Flat-Design-Colors-v2-color-theme-4341903/
 ------------------------------------------------------------------- */
 
-$ci-1: $phlow-dunkel-violett;
-$ci-2: $phlow-dunkel-grau;
+$ci-1: #334D5C;		// dark turquoise
+$ci-2: #45B29D;		// turquoise
 $ci-3: #EFC94C;		// yellow
 $ci-4: #E27A3F;		// orange
 $ci-5: #DF4949;		// red
@@ -74,12 +38,12 @@ $ci-6: #A1D044;     // green
 /* Foundation Color Variables
 ------------------------------------------------------------------- */
 
-$primary-color: 	$phlow-dunkel-violett;
-$secondary-color: 	$phlow-dunkel-grau;
-$alert-color: 		$phlow-dunkel-rot;
-$success-color: 	$phlow-dunkel-gruen;
-$warning-color: 	$phlow-rotbraun;
-$info-color: 		$phlow-dunkel-blau;
+$primary-color: $ci-1;
+$secondary-color: $ci-6;
+$alert-color: $ci-5;
+$success-color: $ci-6;
+$warning-color: $ci-4;
+$info-color: $ci-1;
 
 
 
@@ -108,33 +72,35 @@ $grey-16: #0B0B0B;
 /* Topbar-Navigation
 ------------------------------------------------------------------- */
 
-$topbar-bg-color: #fff;
+$topbar-bg-color: $body-bg;
+$topbar-bg: $topbar-bg-color;
 
-$topbar-dropdown-link-bg: $phlow-dunkel-violett;
-$topbar-dropdown-link-color: #fff;
-$topbar-dropdown-link-bg-hover: $phlow-hell-pink;
-$topbar-dropdown-toggle-color: $phlow-dunkel-violett;
+
+$topbar-dropdown-toggle-color: $ci-1;
 
 $topbar-link-color: #000;
-$topbar-link-color-hover: #fff;
+$topbar-link-color-hover: #000;
 $topbar-link-color-active: #000;
 $topbar-link-color-active-hover: #000;
 
-$topbar-dropdown-label-color: $phlow-dunkel-violett;
+$topbar-dropdown-label-color: $ci-2;
+$topbar-dropdown-link-bg-hover: $ci-6;
 
-$topbar-link-bg-active: $phlow-hell-pink; // Aktiver ausgewählter Menupunkt
-$topbar-link-bg-hover: $phlow-dunkel-violett;
+$topbar-link-bg-active: $ci-6; // Active Navigation Link
+$topbar-link-bg-hover: $ci-6;
 $topbar-link-bg-active-hover: $ci-2;
 
 
-$topbar-dropdown-bg: $phlow-hell-pink; // Hintergrund kleine Navigation
+$topbar-dropdown-bg: $ci-6; // Background Mobile Navigation
+$topbar-dropdown-link-color: #000;
+$topbar-dropdown-link-bg: $ci-2;
 
 $topbar-menu-link-color-toggled: $ci-1;
 $topbar-menu-icon-color-toggled: $ci-1;
 $topbar-menu-link-color: #000;
 $topbar-menu-icon-color: #000;
-$topbar-menu-link-color-toggled: $phlow-hell-pink;
-$topbar-menu-icon-color-toggled: $phlow-hell-pink;
+$topbar-menu-link-color-toggled: $ci-6;
+$topbar-menu-icon-color-toggled: $ci-6;
 
 
 
@@ -143,7 +109,7 @@ $topbar-menu-icon-color-toggled: $phlow-hell-pink;
 
 $footer-bg: $grey-8;
 $footer-color: #fff;
-$footer-link-color: $phlow-hell-pink;
+$footer-link-color: $ci-6;
 
 
 $subfooter-bg: $grey-13;
@@ -155,7 +121,7 @@ $subfooter-link-color: $grey-8;
 /* Code
 ------------------------------------------------------------------- */
 
-$code-background-color: $phlow-hell-pink;
+$code-background-color: scale-color($secondary-color, $lightness: 70%);
 
 $highlight-background: #ffffff;
 $highlight-comment: #999988;

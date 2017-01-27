@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 $spacing-unit: 30px;
 
 
@@ -325,15 +327,15 @@ $list-side-margin: 1.3rem;
 // $include-html-accordion-classes: $include-html-classes;
 
 $accordion-navigation-padding: rem-calc(12);
-$accordion-navigation-bg-color: #ffffff;
-$accordion-navigation-hover-bg-color: $grey-1;
-$accordion-navigation-active-bg-color: $grey-1;
+// $accordion-navigation-bg-color: #ffffff;
+// $accordion-navigation-hover-bg-color: $grey-1;
+// $accordion-navigation-active-bg-color: $grey-1;
 // $accordion-navigation-font-color: $jet;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
-$accordion-content-active-bg-color: $grey-1;
+$accordion-content-active-bg-color: $body-bg;
 
 // 02. Alert Boxes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -438,7 +440,7 @@ $crumb-slash: "/";
 // $button-margin-bottom: rem-calc(20);
 
 // We use these to control button text styles.
-$button-font-family: $font-family-sans-serif;
+// $button-font-family: $body-font-family;
 // $button-font-color: $white;
 // $button-font-color-alt: $oil;
 // $button-font-tny: rem-calc(11);
@@ -1138,17 +1140,17 @@ $side-nav-list-margin: rem-calc(0 0 0 0);
 
 // We use these to control link styles.
 $side-nav-link-color: $primary-color;
-$side-nav-link-color-active: $phlow-mittel-mangenta;
-$side-nav-link-color-hover: $phlow-mittel-mangenta;
+$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: -40%);
+$side-nav-link-color-hover: scale-color($side-nav-link-color, $lightness: -40%);
 $side-nav-font-size: rem-calc(16);
 
 // $side-nav-link-bg-hover: hsla(0, 0, 0, 0.025);
 // $side-nav-link-margin: 0;
 // $side-nav-link-padding: rem-calc(7 14);
 // $side-nav-font-size: rem-calc(14);
-$side-nav-font-weight: $font-weight-normal;
+// $side-nav-font-weight: $font-weight-normal;
 // $side-nav-font-weight-active: $side-nav-font-weight;
-$side-nav-font-family: $font-family-sans-serif;
+// $side-nav-font-family: $body-font-family;
 // $side-nav-font-family-active: $side-nav-font-family;
 
 // We use these to control heading styles.
@@ -1371,12 +1373,8 @@ $table-head-bg: $grey-2;
 
 // $include-html-top-bar-classes: $include-html-classes;
 
-// Background color for the top bar
-$topbar-bg-color: #fff;
-$topbar-bg: $topbar-bg-color;
-
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: rem-calc(50);
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar
@@ -1405,7 +1403,7 @@ $topbar-link-font-size: rem-calc(15);
 // $topbar-link-bg-hover: #f00;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
-$topbar-link-font-family: $header-font-family;
+// $topbar-link-font-family: $body-font-family;
 $topbar-link-text-transform: uppercase;
 // $topbar-link-padding: $topbar-height / 3;
 // $topbar-back-link-size: $h5-font-size;

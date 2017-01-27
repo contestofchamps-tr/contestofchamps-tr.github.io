@@ -1,19 +1,36 @@
 ---
 layout: page
-subheadline: 
-title: 
-teaser:
-meta_description:
-permalink:
+#
+# Content
+#
+subheadline: ""
+title: ""
+teaser: ""
 categories:
-    - 
+  - 
 tags:
-    - 
+  - 
+#
+# Styling
+#
 image:
-    title: 
-    thumb: 
+    title:
+    thumb:
     homepage:
     caption:
     caption_url:
-style: "#masthead-with-background-color > div > figure { text-align: center };"
 ---
+
+
+
+
+ [1]: #
+ [2]: #
+ [3]: #
+ [4]: #
+ [5]: #
+ [6]: #
+ [7]: #
+ [8]: #
+ [9]: #
+ [10]: #

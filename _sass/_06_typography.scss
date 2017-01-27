@@ -1,30 +1,63 @@
-//
-// Typography 
-//
-// Check typography variables › _3_typography_settings.scss
-//
+@charset "utf-8";
+/* TOC – Typography
+
+Check typography variables › _3_typography_settings.scss
+
+- Links
+- Customize Foundation Typography
+- Headlines
+- Images
+- Lists
+- Tables
+- Code
+- Quotes
+- Typography for Articles
+- Smaller Fontsize for Bigteaser on small devices
+- Additional typographical elements
+- Footnotes
+- Icon Font
+
+*/
+
+
 
 /* Links
 ------------------------------------------------------------------- */
 
 a,
-a:link {}
-a:visited { }
-a:hover { color: $phlow-mittel-mangenta; }
-a:focus { color: $phlow-hell-pink; }
-a:active { color: darken( $ci-1, 20% ); }
+a:link {
+    transition: all .4s;
+}
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border: 0 !important; font-weight: normal !important; }
+a:visited {
+    border-bottom: $grey-2;
+}
+
+a:hover {
+    color: darken( $ci-1, 10% );
+}
+
+a:focus {
+    color: lighten( $ci-1, 20% );
+}
+
+a:active {
+    color: darken( $ci-1, 20% );
+}
 
 
-/* Additional Typography to complement Foundation
+
+/* Customize Foundation Typography
 ------------------------------------------------------------------- */
 
-p { 
+p {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+    -ms-word-break: normal;
+    /* Non standard for webkit */
+    word-break: normal;
 }
 p a,
 article a {
@@ -40,14 +73,14 @@ p a.button,
 .button:hover {
     border: 0;
     color: #fff;
-    font-weight: normal;
 }
 p.button a {
     border: 0;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-    font-weight: normal;
 }
+
+
 
 /* Headlines
 ------------------------------------------------------------------- */
@@ -64,22 +97,22 @@ h1 {
 }
 h2 {
     font-size: $font-size-h2;
-    margin-top: 1.563em;
+    margin: 1.563em 0 0 0;
 }
     .blog-index h2 {
         margin-top: 0;
     }
 h3 {
     font-size: $font-size-h3;
-    margin-top: 1.152em;
+    margin: 1.152em 0 0 0;
 }
 h4 {
     font-size: $font-size-h4;
-    margin-top: 1.152em;
+    margin: 1.152em 0 0 0;
 }
 h5 {
     font-size: $font-size-h5;
-    margin-top: 1em;
+    margin: 1em 0 0 0;
 }
 
 
@@ -125,6 +158,7 @@ figcaption a:hover,
 }
 
 
+
 /* Tables
 ------------------------------------------------------------------- */
 
@@ -141,13 +175,12 @@ pre {
     overflow: auto;
     margin-bottom: rem-calc(20);
     padding: 5px;
-    background-color: $grey-1;
+    background-color: $code-background-color;
     border-radius: $global-radius;
 }
 pre code {
     padding: rem-calc(2) rem-calc(5) rem-calc(1) rem-calc(0);
     border: 0;
-    background-color: $grey-1;
 }
 
 code {
@@ -188,40 +221,12 @@ dt:first-child {
 }
 dt {
     font-weight: bold;
-    padding-top: 15px;
+    padding-top: 30px;
 }
 dd {
 }
-
 article dl dt   { line-height: 1.3; }
 article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: rem-calc(24); }
-
-ul.plus, ul.minus {
-  list-style-type: none;
-  margin: 0 0 1.25rem 0;
-}
-ul.plus li:before,
-ul.minus li:before {
-  // font-family: $font-family-sans-serif;
-  margin: .26em .6em 0 0;
-  height: 1em;
-  width: 1em;
-  display: block;
-  text-align: center;
-  float: left;
-  color: #fff;
-  border-radius: 50%;
-  line-height: 1em;
-}
-ul.plus li:before {
-  content: "+";
-  background: $success-color;
-}
-ul.minus li:before {
-  content: "-";
-  background: $warning-color;
-}
-
 
 
 
@@ -233,33 +238,35 @@ blockquote {
     position: relative;
     border: none;
     margin: 0 30px 30px 30px;
-    color: #4b4b4d
+    color:  $grey-11;
 }
- 
+
     blockquote p {font-style: italic; color: $grey-10; }
- 
+
     blockquote:before {
         display:block;content:"\00BB";
         font-size:80px;
+        line-height: 0;
         position:absolute;
-        left: -30px;
-        top: -40px;
-        color:#4b4b4d
+        left:-25px;
+        top: auto;
+        color: $grey-11;
     }
     blockquote:after {
         display:block;
         content:"\00AB";
         font-size:80px;
+        line-height: 0;
         position:absolute;
         right:-10px;
-        bottom:-40px;
-        color:#4b4b4d;
+        bottom: 20px;
+        color: $grey-11;
     }
     blockquote cite:before {
         content:"\2014 \0020"
     }
     blockquote cite a,blockquote cite a:visited {
-        color: #555
+        color: $grey-10;
     }
 cite {
     padding-top: 5px;
@@ -275,22 +282,6 @@ mark {
 
 
 
-
-
-
-/* SUP
-------------------------------------------------------------------- */
-
-sup { font-family: $font-family-sans-serif; }
-sup a {
-    border: 0;
-}
-
-
-
-
-
-
 /* Typography for Articles
 ------------------------------------------------------------------- */
 
@@ -298,8 +289,6 @@ sup a {
     font-size: rem-calc(16);
     margin: 0;
     text-transform: uppercase;
-    font-family: $header-font-family;
-    font-weight: 300;
 }
 .teaser {
     font-size: rem-calc(20);
@@ -311,7 +300,7 @@ sup a {
     font-style: italic; font-weight: 400;
 }
 
-/* Smaller Font Size for Bigteaser on small devices */
+/* Smaller Fontsize for Bigteaser on small devices */
 @media only screen {
     .big-teaser {
         font-size: rem-calc(20);
@@ -323,28 +312,6 @@ sup a {
     }
 }
 
-
-/* Typography Footer
-------------------------------------------------------------------- */
-
-footer {
-    font-family: $header-font-family;
-}
-footer h5 {
-    font-weight: 300;
-}
-
-
-/* Footnotes
-------------------------------------------------------------------- */
-
-.footnotes {
-    margin-top: 60px;
-}
-
-.footnotes ol { 
-    font-size: $font-size-small;
-}
 
 
 /* Additional typographical elements
@@ -360,10 +327,34 @@ footer h5 {
 .font-size-h5   { font-size: $font-size-h5; }
 .font-size-p    { font-size: $font-size-p; }
 
-.breadcrumbs    { font-family: $font-family-sans-serif; }
 
 
-/* Icon Font: iconfont
+/* Footnotes
+------------------------------------------------------------------- */
+
+.footnotes:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60px;
+    margin-top: -10px;
+    border-bottom: 1px solid $grey-2;
+}
+.footnotes {
+    margin-top: 60px;
+}
+.footnotes ol {
+    font-size: $font-size-small;
+}
+.footnotes p {
+    font-size: inherit;
+    margin-bottom: 0;
+}
+
+
+
+
+/* Icon Font
    See the icon-set/preview in /assets/fonts/iconfont-preview.html
 ------------------------------------------------------------------- */
 
@@ -407,6 +398,7 @@ footer h5 {
 .icon-feather:before,
 .icon-github:before,
 .icon-globe:before,
+.icon-googleplus:before,
 .icon-heart:before,
 .icon-heart-outlined:before,
 .icon-home:before,
@@ -435,6 +427,7 @@ footer h5 {
 .icon-video:before,
 .icon-vimeo:before,
 .icon-warning:before,
+.icon-xing:before,
 .icon-youtube:before {
   display: inline-block;
 font-family: "iconfont";
@@ -474,6 +467,7 @@ font-smoothing: antialiased;
 .icon-feather:before { content: "\f114"; }
 .icon-github:before { content: "\f115"; }
 .icon-globe:before { content: "\f116"; }
+.icon-googleplus:before { content: "\f136"; }
 .icon-heart:before { content: "\f117"; }
 .icon-heart-outlined:before { content: "\f118"; }
 .icon-home:before { content: "\f119"; }
@@ -502,4 +496,5 @@ font-smoothing: antialiased;
 .icon-video:before { content: "\f12f"; }
 .icon-vimeo:before { content: "\f130"; }
 .icon-warning:before { content: "\f131"; }
+.icon-xing:before { content: "\f135"; }
 .icon-youtube:before { content: "\f132"; }

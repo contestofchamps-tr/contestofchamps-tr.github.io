@@ -1,16 +1,23 @@
 ---
 layout: compress
 ---
-{% include head.html %}
-<body id="top-of-page" class="{{ page.format }}">
-	{% include navigation.html %}
+<!doctype html>
+<html class="no-js" lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+<head>
+	{% include _head.html %}
+</head>
+<body id="top-of-page" class="{{ layout.format }}">
+	{% unless page.skip_boilerplate %}
+	{% include _navigation.html %}
+	{% endunless %}
 
-	{% include masthead.html %}
-
+	{% include _masthead.html %}
 	{{ content }}
 
-	{% include footer.html %}
+	{% unless page.skip_boilerplate %}
+	{% include _footer.html %}
+	{% endunless %}
 
-	{% include footer_scripts.html %}
+	{% include _footer_scripts.html %}
 </body>
 </html>

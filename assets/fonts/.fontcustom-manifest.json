@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "7680fdcdd1d625cdc3b4efee04bcd50aecf11af21345941d72e5f635b1ba9bba",
-    "current": "7680fdcdd1d625cdc3b4efee04bcd50aecf11af21345941d72e5f635b1ba9bba"
+    "previous": "03f5dd2a3a893dc3637cdfbb6da25d276f597ea03db701e7220b5dfcde6ef9bf",
+    "current": "03f5dd2a3a893dc3637cdfbb6da25d276f597ea03db701e7220b5dfcde6ef9bf"
   },
   "fonts": [
     "./iconfont.ttf",
@@ -105,6 +105,10 @@
     "globe": {
       "codepoint": 61718,
       "source": "svg-files-for-custom-font/globe.svg"
+    },
+    "googleplus": {
+      "codepoint": 61750,
+      "source": "svg-files-for-custom-font/googleplus.svg"
     },
     "heart": {
       "codepoint": 61719,
@@ -218,6 +222,10 @@
       "codepoint": 61745,
       "source": "svg-files-for-custom-font/warning.svg"
     },
+    "xing": {
+      "codepoint": 61749,
+      "source": "svg-files-for-custom-font/xing.svg"
+    },
     "youtube": {
       "codepoint": 61746,
       "source": "svg-files-for-custom-font/youtube.svg"
@@ -235,8 +243,8 @@
     "font_name": "iconfont",
     "force": false,
     "input": {
-      "templates": "svg-files-for-custom-font",
-      "vectors": "svg-files-for-custom-font"
+      "templates": "svg-files-for-custom-font/",
+      "vectors": "svg-files-for-custom-font/"
     },
     "no_hash": true,
     "output": {
