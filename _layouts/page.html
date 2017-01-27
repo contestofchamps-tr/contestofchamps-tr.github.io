@@ -5,10 +5,15 @@ format: post
 <div class="row t30">
 	<div class="medium-8 columns{% if page.sidebar == NULL %} medium-offset-2 end{% endif %}{% if page.sidebar == "left" %} medium-push-4{% endif %}">
 		<article itemscope itemtype="http://schema.org/Article">
+		<meta content="{{ site.language }}" itemprop="inLanguage" />
 			<header>
+
+		        {% include _video_embed.html %}
+
+
 				{% if page.image.title %}
 				<figure>
-					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
+					<img src="{{ site.url }}/images/{{ page.image.title }}" width="970" alt="{{ page.title | escape_once }}" itemprop="image">
 
 					{% if page.image.caption_url and page.image.caption %}
 					<figcaption class="text-right">
@@ -22,41 +27,29 @@ format: post
 				</figure>
 				{% endif %}
 
-				<div itemprop="name">
+				<span itemprop="name">
 					{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 					<h1>{{ page.title }}</h1>
-				</div>
+				</span>
 			</header>
-			
-			{% if page.character %}
-			<div itemprop="articleSection">
-			<h3>Bio:</h3>
-			{{ site.data.char.[page.character].bio }}
-			<br>
-			<h3>Özel Hareketler</h3>
-			<h4>Özel Hareket 1</h4>
-			<strong>{{ site.data.special.[page.character].s1a_name }}</strong> : {{ site.data.special.[page.character].s1a_desc }}
-			<h4>Özel Hareket 2</h4>
-			<strong>{{ site.data.special.[page.character].s2a_name }}</strong> : {{ site.data.special.[page.character].s2a_desc }}
-			<h4>Özel Hareket 3</h4>
-			<strong>{{ site.data.special.[page.character].s3a_name }}</strong> : {{ site.data.special.[page.character].s3a_desc }}
-			
 
 
-			
-			</div>
+			{% if page.teaser %}
+			<p class="teaser" itemprop="description">
+				{{ page.teaser }}
+			</p>
 			{% endif %}
 
-			<div itemprop="articleSection">
+			<span itemprop="articleSection">
 			{{ content }}
-			</div>
+			</span>
 
 			{% if page.show_meta == true %}
-			{% include _meta_information.html %}
+			{% include meta_information.html %}
 			{% endif %}
 
 			{% if page.comments == true %}
-			{% include _comments.html %}
+			{% include comments.html %}
 			{% endif %}
 		</article>
 	</div><!-- /.medium-8.columns -->
@@ -64,14 +57,14 @@ format: post
 
 	{% if page.sidebar == "left" %}
 	<div class="medium-4 columns medium-pull-8">
-		{% include _sidebar.html %}
+		{% include sidebar.html %}
 	</div><!-- /.medium-4.columns -->
 	{% endif %}
 
 
 	{% if page.sidebar == "right" %}
 	<div class="medium-4 columns">
-		{% include _sidebar.html %}
+		{% include sidebar.html %}
 	</div><!-- /.medium-4.columns -->
 	{% endif %}
 </div><!-- /.row -->

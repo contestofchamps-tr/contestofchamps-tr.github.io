@@ -1,26 +1,5 @@
-@charset "utf-8";
-/* TOC
 
-- Adjustments: Video Layout
-- Navigation
-- Search
-- Masthead
-- Masthead › small-only
-- Masthead › medium-only
-- Masthead › large-only
-- Masthead › xlarge-up
-- Breadcrumb
-- Meta
-- Jump to top
-- Footer
-- Subfooter
-- CSS-Classes to add margin at top or bottom
-
-*/
-
-
-
-/* Adjustments: Video Layout
+/* Special treatment for video layout
 ------------------------------------------------------------------- */
 
 body.video,
@@ -55,8 +34,9 @@ body.video cite { color: #fff; }
 /* Search
 ------------------------------------------------------------------- */
 
-.no-js form#search {
-  display: none;
+#search {
+    padding: 20px 0 0 0;
+    background: $ci-4;
 }
 
 
@@ -65,27 +45,32 @@ body.video cite { color: #fff; }
 ------------------------------------------------------------------- */
 
 #masthead {
-    background-color: $primary-color;
+    background: $phlow-mittel-mangenta;
 }
 #masthead-no-image-header {
-    background-color: $primary-color;
+    background: $phlow-mittel-mangenta;
 }
 #masthead-with-text {
     text-align: center;
-    font-size: rem-calc(54);
+    font-size: 4.292em;
     font-family: $header-font-family;
+    font-weight: 300;
     color: #fff;
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
 #masthead-no-image-header {
     height: 175px;
+    background: $grey-9;
 }
 #masthead-no-image-header #logo img {
-    margin-top: 0px;
+    margin-top: 60px;
+}
+.backstretch {
+    background: $phlow-mittel-mangenta;
 }
 
-/* Masthead › small-only
+/* Masthead › small-only
 ------------------------------------------------------------------- */
 
 @media #{$small-only} {
@@ -112,7 +97,7 @@ body.video cite { color: #fff; }
 }
 
 
-/* Masthead › medium-only
+/* Masthead › medium-only
 ------------------------------------------------------------------- */
 
 @media #{$medium-only} {
@@ -135,7 +120,7 @@ body.video cite { color: #fff; }
 }
 
 
-/* Masthead › large-only
+/* Masthead › large-only
 ------------------------------------------------------------------- */
 
 @media #{$large-only} {
@@ -158,7 +143,7 @@ body.video cite { color: #fff; }
 }
 
 
-/* Masthead › xlarge-up
+/* Masthead › xlarge-up
 ------------------------------------------------------------------- */
 
 @media #{$xlarge-up} {
@@ -196,6 +181,7 @@ body.video cite { color: #fff; }
 
 
 
+
 /* Breadcrumb
 ------------------------------------------------------------------- */
 
@@ -204,9 +190,7 @@ body.video cite { color: #fff; }
     border-top: 1px solid scale-color($grey-1, $lightness: 45%);
     border-bottom: 1px solid scale-color($grey-1, $lightness: 45%);
 }
-.breadcrumbs>.current {
-  font-weight: bold;
-}
+
 
 
 /* Meta
@@ -226,18 +210,6 @@ body.video cite { color: #fff; }
 #page-meta .button:hover {
     background: $primary-color;
 }
-.meta-info p {
-  font-size: rem-calc(13);
-  color: scale-color($grey-1, $lightness: 40%);
-}
-  .meta-info a {
-    text-decoration: underline;
-    color: scale-color($grey-1, $lightness: 40%);
-  }
-  .meta-info a:hover {
-    text-decoration: none;
-    color: $secondary-color;
-  }
 
 
 
@@ -261,21 +233,22 @@ body.video cite { color: #fff; }
 /* Footer
 ------------------------------------------------------------------- */
 
-#footer-content p,
-#footer-content li {
-    font-size: rem-calc(13);
-    font-weight: 300;
-}
-
 #footer {
     padding-top: 30px;
     padding-bottom: 20px;
     background: $footer-bg;
     color: $footer-color;
     }
-
+    footer p,
+    footer li {
+        font-size: rem-calc(13);
+        font-weight: 300;
+    }
     #footer a {
         color: $footer-link-color;
+    }
+    #footer a:hover {
+        color: #fff;
     }
     #footer h4,
     #footer h5 {
@@ -285,56 +258,43 @@ body.video cite { color: #fff; }
     }
 
 
-
-/* Subfooter
-------------------------------------------------------------------- */
-
 #subfooter {
     background: $subfooter-bg;
     color: $subfooter-color;
     padding-top: 30px;
+    padding-bottom: 10px;
 }
-
-#subfooter-left ul.inline-list {
-    float: left;
-}
-
-.credits a {
-    color: $subfooter-link-color;
-    border: 0;
-    text-transform: uppercase;
-    &:hover {
-        color: #fff;
-  }
-}
-
-.social-icons {
-    margin-bottom: 10px !important;
-
-// Beware of SCSS-Syntax here
-  li {
-    padding: 0 0 20px 0;
-  }
-  a {
-    font-size: rem-calc(23);
-    display: block;
-    width: 36px;
-    border-radius: 50%;
-    color: $subfooter-bg;
-    background: $subfooter-color;
-    text-align: center;
-    &:hover {
-      background: $subfooter-bg;
-      color: #fff;
+    #subfooter-left ul.inline-list {
+        float: left;
     }
-  }
-}
+    #subfooter li a {
+        color: $subfooter-link-color;
+        text-transform: uppercase;
+    }
+    #subfooter li a:hover {
+        color: #fff;
+    }
+    #subfooter .social-icons li a {
+        font-size: rem-calc(23);
+        display: block;
+        width: 36px;
+        border-radius: 50%;
+        color: $subfooter-bg;
+        background: $subfooter-color;
+        text-align: center;
+    }
+    #subfooter .social-icons li a:hover {
+        background: $subfooter-bg;
+        color: #fff;
+    }
 
 
 
-/* CSS-Classes to add margin at top or bottom
+/* CSS-Classes to add margin at the top or bottom
 ------------------------------------------------------------------- */
 
+.m0  { margin: 0;}
+.t0 { margin-top: 0px !important; }
 .t10 { margin-top: 10px !important; }
 .t15 { margin-top: 15px !important; }
 .t20 { margin-top: 20px !important; }

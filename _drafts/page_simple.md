@@ -1,18 +1,9 @@
 ---
 layout: page
-#
-# Content
-#
-subheadline: ""
-title: ""
-teaser: ""
-#
-# Styling
-#
-header: no
-#
-# Metainformation & Customization
-#
+subheadline:
+title: 
+teaser: 
 permalink:
+header: no
 ---
 
